@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
 
-    initLayoutComponent();
+    initLayoutData();
     linkLayoutComponents();
     initLayoutContent();
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
-  private void initLayoutContent() {
+  private void initLayoutData() {
 
   }
 
