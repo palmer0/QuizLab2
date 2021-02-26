@@ -29,6 +29,7 @@
 
         <Button
             android:id="@+id/trueButton"
+            android:onClick="trueButtonCliecked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/true_button_text" />
@@ -41,6 +42,7 @@
             android:id="@+id/falseButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="falseButtonCliecked"
             android:text="@string/false_button_text" />
     </LinearLayout>
 
@@ -69,6 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="cheatButtonCliecked"
             android:text="@string/cheat_button_text" />
 
         <Space
@@ -80,6 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="nextButtonCliecked"
             android:text="@string/next_button_text" />
     </LinearLayout>
 
