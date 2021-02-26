@@ -24,19 +24,13 @@ public class MainActivity extends AppCompatActivity {
     initLayoutData();
     linkLayoutComponents();
     initLayoutContent();
+    enableLayoutButtons();
 
-    questionArray = getResources().getStringArray(R.array.question_array);
-    replyArray= getResources().getIntArray(R.array.reply_array);
 
-    replyText=findViewById(R.id.replyText);
-    questionText=findViewById(R.id.questionText);
+  }
 
-    cheatButton=findViewById(R.id.cheatButton);
-    nextButton=findViewById(R.id.nextButton);
-    trueButton=findViewById(R.id.trueButton);
-    falseButton=findViewById(R.id.falseButton);
+  private void enableLayoutButtons() {
 
-    /*
     trueButton.setOnClickListener(new View.OnClickListener() {
 
       @Override
@@ -52,22 +46,45 @@ public class MainActivity extends AppCompatActivity {
         falseButtonCliecked( view);
       }
     });
-    */
 
-    questionText.setText(questionArray[0]);
 
+    cheatButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View view) {
+        cheatButtonCliecked( view);
+      }
+    });
+
+    nextButton.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View view) {
+        nextButtonCliecked( view);
+      }
+    });
   }
 
   private void initLayoutContent() {
+    questionText.setText(questionArray[0]);
 
   }
 
   private void linkLayoutComponents() {
 
+    replyText=findViewById(R.id.replyText);
+    questionText=findViewById(R.id.questionText);
+
+    cheatButton=findViewById(R.id.cheatButton);
+    nextButton=findViewById(R.id.nextButton);
+    trueButton=findViewById(R.id.trueButton);
+    falseButton=findViewById(R.id.falseButton);
+
   }
 
   private void initLayoutData() {
-
+    questionArray = getResources().getStringArray(R.array.question_array);
+    replyArray= getResources().getIntArray(R.array.reply_array);
   }
 
   public void trueButtonCliecked(View view) {
