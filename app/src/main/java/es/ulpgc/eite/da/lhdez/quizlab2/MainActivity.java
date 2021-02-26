@@ -12,11 +12,17 @@ public class MainActivity extends AppCompatActivity {
 
   private Button cheatButton, nextButton, trueButton, falseButton;
   private TextView questionText, replyText;
+  private String[] questionArray;
+  private int[] replyArray;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+
+    questionArray = getResources().getStringArray(R.array.question_array);
+    replyArray= getResources().getIntArray(R.array.reply_array);
 
     replyText=findViewById(R.id.replyText);
     questionText=findViewById(R.id.questionText);
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     });
     */
 
+    questionText.setText(questionArray[0]);
 
   }
 
