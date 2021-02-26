@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
 
+    initLayoutComponent();
+    linkLayoutComponents();
+    initLayoutContent();
+
     questionArray = getResources().getStringArray(R.array.question_array);
     replyArray= getResources().getIntArray(R.array.reply_array);
 
@@ -54,12 +58,32 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
-  public void trueButtonCliecked(View view) {
+  private void initLayoutContent() {
 
   }
 
-  public void falseButtonCliecked(View view) {
+  private void linkLayoutComponents() {
 
+  }
+
+  private void initLayoutComponent() {
+
+  }
+
+  public void trueButtonCliecked(View view) {
+    if(replyArray[0] == 1) {
+      replyText.setText(R.string.correct_text);
+    } else {
+      replyText.setText(R.string.incorrect_text);
+    }
+  }
+
+  public void falseButtonCliecked(View view) {
+    if(replyArray[0] == 0) {
+      replyText.setText(R.string.correct_text);
+    } else {
+      replyText.setText(R.string.incorrect_text);
+    }
   }
 
   public void cheatButtonCliecked(View view) {
