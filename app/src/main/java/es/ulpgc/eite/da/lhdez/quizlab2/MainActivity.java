@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
-  private void initLayoutData() {
+  private void initLayoutContent() {
 
   }
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
   }
 
-  private void initLayoutComponent() {
+  private void initLayoutData() {
 
   }
 
